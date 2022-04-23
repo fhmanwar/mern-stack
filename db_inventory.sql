@@ -13,7 +13,7 @@
 
 
 -- Dumping database structure for db_inventory
-CREATE DATABASE IF NOT EXISTS `db_inventory` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `db_inventory`;
 USE `db_inventory`;
 
 -- Dumping structure for table db_inventory.brands
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `brands` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 
 -- Dumping data for table db_inventory.brands: ~2 rows (approximately)
 /*!40000 ALTER TABLE `brands` DISABLE KEYS */;
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 
 -- Dumping data for table db_inventory.categories: ~0 rows (approximately)
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5;
 
 -- Dumping data for table db_inventory.countries: ~4 rows (approximately)
 /*!40000 ALTER TABLE `countries` DISABLE KEYS */;
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `currencies` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4;
 
 -- Dumping data for table db_inventory.currencies: ~3 rows (approximately)
 /*!40000 ALTER TABLE `currencies` DISABLE KEYS */;
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `customers_npwp_unique` (`npwp`),
   UNIQUE KEY `customers_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53;
 
 -- Dumping data for table db_inventory.customers: ~51 rows (approximately)
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 
 -- Dumping data for table db_inventory.failed_jobs: ~0 rows (approximately)
 /*!40000 ALTER TABLE `failed_jobs` DISABLE KEYS */;
@@ -202,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `general_settings` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2;
 
 -- Dumping data for table db_inventory.general_settings: ~0 rows (approximately)
 /*!40000 ALTER TABLE `general_settings` DISABLE KEYS */;
@@ -232,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `inventories` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21;
 
 -- Dumping data for table db_inventory.inventories: ~20 rows (approximately)
 /*!40000 ALTER TABLE `inventories` DISABLE KEYS */;
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `lookups` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 
 -- Dumping data for table db_inventory.lookups: ~2 rows (approximately)
 /*!40000 ALTER TABLE `lookups` DISABLE KEYS */;
@@ -284,7 +284,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=44;
 
 -- Dumping data for table db_inventory.migrations: ~22 rows (approximately)
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
@@ -319,7 +319,7 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   KEY `password_resets_email_index` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 
 -- Dumping data for table db_inventory.password_resets: ~0 rows (approximately)
 /*!40000 ALTER TABLE `password_resets` DISABLE KEYS */;
@@ -339,7 +339,7 @@ CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 
 -- Dumping data for table db_inventory.personal_access_tokens: ~0 rows (approximately)
 /*!40000 ALTER TABLE `personal_access_tokens` DISABLE KEYS */;
@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `purchases` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4;
 
 -- Dumping data for table db_inventory.purchases: ~3 rows (approximately)
 /*!40000 ALTER TABLE `purchases` DISABLE KEYS */;
@@ -389,7 +389,7 @@ CREATE TABLE IF NOT EXISTS `purchase_details` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10;
 
 -- Dumping data for table db_inventory.purchase_details: ~9 rows (approximately)
 /*!40000 ALTER TABLE `purchase_details` DISABLE KEYS */;
@@ -416,7 +416,7 @@ CREATE TABLE IF NOT EXISTS `quotations` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4;
 
 -- Dumping data for table db_inventory.quotations: ~3 rows (approximately)
 /*!40000 ALTER TABLE `quotations` DISABLE KEYS */;
@@ -440,7 +440,7 @@ CREATE TABLE IF NOT EXISTS `quotation_details` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5;
 
 -- Dumping data for table db_inventory.quotation_details: ~4 rows (approximately)
 /*!40000 ALTER TABLE `quotation_details` DISABLE KEYS */;
@@ -461,7 +461,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5;
 
 -- Dumping data for table db_inventory.roles: ~4 rows (approximately)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
@@ -494,7 +494,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6;
 
 -- Dumping data for table db_inventory.sales: ~4 rows (approximately)
 /*!40000 ALTER TABLE `sales` DISABLE KEYS */;
@@ -525,7 +525,7 @@ CREATE TABLE IF NOT EXISTS `sale_details` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8;
 
 -- Dumping data for table db_inventory.sale_details: ~7 rows (approximately)
 /*!40000 ALTER TABLE `sale_details` DISABLE KEYS */;
@@ -548,7 +548,7 @@ CREATE TABLE IF NOT EXISTS `stores` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 
 -- Dumping data for table db_inventory.stores: ~2 rows (approximately)
 /*!40000 ALTER TABLE `stores` DISABLE KEYS */;
@@ -566,7 +566,7 @@ CREATE TABLE IF NOT EXISTS `units` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3;
 
 -- Dumping data for table db_inventory.units: ~2 rows (approximately)
 /*!40000 ALTER TABLE `units` DISABLE KEYS */;
@@ -594,7 +594,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5;
 
 -- Dumping data for table db_inventory.users: ~4 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;

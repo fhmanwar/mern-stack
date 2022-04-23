@@ -1,0 +1,11 @@
+
+Command Line:
+    Check eslint suggestion: npx eslint --fix --fix-type suggestion .
+
+Style:
+https://styled-components.com/
+
+Reference Fix Problem:
+https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+https://stackoverflow.com/questions/63124161/attempted-import-error-switch-is-not-exported-from-react-router-dom
+https://eslint.org/docs/rules/arrow-body-style
