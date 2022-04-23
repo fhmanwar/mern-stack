@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const config = require('./src/config');
-const routes = require('./src/routes/index');
+const routes = require('./src/routes/route');
 const handleErrors = require('./src/middlewares/errorHandler');
 
 const app = express();
