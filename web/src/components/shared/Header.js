@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import styled from "styled-components";
 import logo from "../../assets/images/header-logo.png";
 

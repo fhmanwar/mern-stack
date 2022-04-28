@@ -1,4 +1,4 @@
-import { React } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 // import './App.css';
 import styled from "styled-components";
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/add" element={<AddPage/>} />
-        <Route path="/edit" element={<EditPage/>} />
+        <Route path="/edit/:id" element={<EditPage/>} />
       </Routes>
     </Container>
   );

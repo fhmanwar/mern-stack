@@ -9,3 +9,13 @@ Reference Fix Problem:
 https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
 https://stackoverflow.com/questions/63124161/attempted-import-error-switch-is-not-exported-from-react-router-dom
 https://eslint.org/docs/rules/arrow-body-style
+https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
+
+
+Menyimpan Data
+Ketika kita membuat sebuah note baru maka note tersebut harus disimpan di suatu tempat, ada beberapa pilihan tempat menyimpan data:
+    - Component State => tapi data akan hilang ketika browser di-refresh
+    - Database => ini adalah tempat paling ideal untuk menyimpan data sebuah aplikasi, tapi karena kita hanya fokus pada Front End sedangkan Database umumnya 'hidup' di server maka kita tidak akan menggunakan Database untuk saat ini
+    - Local Data Storage / Database => seperti sqlite, realm adalah media penyimpanan yang bisa digunakan di sisi client, tapi kita perlu belajar konsep yang digunakan terlebih dahulu
+    - Browser localStorage => media penyimpanan yang ada pada browser ini dapat kita gunakan untuk menyimpan data sementara, data tidak akan hilang selama data tidak dihapus(clear browsing data/cache)
+Kita ambil yang paling simple, yaitu localStorage.
