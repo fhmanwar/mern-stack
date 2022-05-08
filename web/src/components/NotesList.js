@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+// import getLocalStorageData from '../utils/getLocalStorageData';
 
 const NotesListContainer = styled.div`
     display: flex;
@@ -21,17 +22,60 @@ const ListItem = styled.li`
     margin: 0.5rem;
 `;
 
+const Separator = styled.hr`
+    width: 90%;
+    margin: -1px;
+    background-color: #edf2f7;
+    color: #edf2f7;
+`;
+
+// const NotesList = () => {
+//     // const existing = localStorage.getItem('notes');
+//     // const notes = existing ? JSON.parse(existing) : [];
+//     const notes = getLocalStorageData('notes');
+
+//     const listItems = notes.map((note) => {
+//         return (
+//             <ListItem key={note.id}>
+//                 <h4>
+//                     <Link to={`/edit/${note.id}`}>{ note.title }</Link>
+//                 </h4>
+//                 <p>{note.note.slice(0, 101)}</p>
+//                 <Separator />
+//             </ListItem>
+//         );
+//     });
+
+//     return (
+//         <NotesListContainer>
+//             <List>{ listItems }</List>
+//         </NotesListContainer>
+//     );
+
+// };
 const NotesList = () => {
-    const existing = localStorage.getItem('notes');
+    const [notes, setNotes] = useState(null);
 
-    const notes = existing ? JSON.parse(existing) : [];
+    useEffect(() => {
+        
+        async function fetchData() {
+            const response = await fetch('http://localhost:5001/api/role');
+            const data = await response.json();
+            setNotes({data});
+        }
+    
+        fetchData();
+    }, []);
 
-    const listItems = notes.map((note) => {
+    const listItems = notes && notes.data.data.map((note) => {
+        // console.log(note);
         return (
             <ListItem key={note.id}>
                 <h4>
-                    <Link to={`/edit/${note.id}`}>{ note. title }</Link>
+                    <Link to={`/edit/${note.id}`}>{ note.name }</Link>
                 </h4>
+                <p>{note.description.slice(0, 101)}</p>
+                <Separator />
             </ListItem>
         );
     });

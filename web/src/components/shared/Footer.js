@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <Container>
             <p>
-                <h1>Footer</h1>
+                By iBoyDev &copy; 2020
             </p>
         </Container>
     );

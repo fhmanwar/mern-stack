@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <Container>
             <img src={logo} alt="logo" />
-            <h1>Logo</h1>
+            <h1>Test Apps</h1>
         </Container>
     );
 };
