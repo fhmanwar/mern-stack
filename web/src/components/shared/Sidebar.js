@@ -44,7 +44,12 @@ const Sidebar = () => {
 
     return (
         <>
-        <IconContext.Provider value={ color: '#fff' }>
+        <IconContext.Provider value={{ color: '#fff' }}>
+            <Nav>
+                <NavIcon to='#'>
+                    {/* <FaIco */}
+                </NavIcon>
+            </Nav>
         </IconContext.Provider>
         </>
     );
