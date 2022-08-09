@@ -74,7 +74,8 @@ const NotesList = () => {
                 <h4>
                     <Link to={`/edit/${note.id}`}>{ note.name }</Link>
                 </h4>
-                <p>{note.description.slice(0, 101)}</p>
+                {/* <p>{note.description.slice(0, 101)}</p> */}
+                <p>{note.description}</p>
                 <Separator />
             </ListItem>
         );
